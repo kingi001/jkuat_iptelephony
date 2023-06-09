@@ -1,0 +1,106 @@
+@media (max-width: 80px) {
+ 
+}
+
+body {  
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 768px) {
+    body {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+  .container {
+    max-width: 1200px; /* Adjust the max-width based on your design */
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .table-container {
+    max-height: 500px; /* Adjust the maximum height as needed */
+    overflow: auto;
+  }
+  
+  /* Optimize image sizes */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Additional custom styling for your app */
+  
+  /* Adjust specific element sizes as needed */
+  .element {
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+  }
+  
+  /* Define styles for smaller screens */
+  @media (max-width: 768px) {
+    .element {
+      width: 100%; /* Adjust width for smaller screens */
+      height: auto; /* Adjust height for smaller screens */
+    }
+  }
+  
+
+
+/*  */
+div#div_navigation {
+    /* background-color:#009ED5; */
+    background-color: #4CA64C;
+	display:flex;
+	/* padding:2em 1em; */
+	align-items:center;
+	justify-content:space-between;
+	color:white;
+    
+    
+}
+
+#img_logo {
+    width:200px;
+}
+
+#page_header { 
+	/* display:flex;
+	flex-direction:column;
+	align-items:center; */
+    display:inline;
+    float: left;
+    margin-left: 15%;
+}
+ 
+#organization_name {
+	font-size:20px;
+	font-weight:bold;
+    clear: both;
+}
+
+#organization_slogan {
+	font-weight: bold;
+    font-size: 15px;
+    clear: both;
+}
+
+#app_title {
+	font-weight: bolder;
+    font-size: 15px;
+    font-family: Helvetica;
+    color: #fff;
+    background-color: transparent; 
+	margin-left: 15%; 
+	position: relative;
+    float: left;
+    clear: both; 
+}
+#title_public
+{
+    text-align: center;
+    /* color: #009ED5; */
+    color: #4CA64C;
+}
+
+

@@ -1,0 +1,23 @@
+body {
+    background-image: url('/images/grid.png');
+    background-repeat: repeat;
+}
+
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100%;
+    position: relative;
+}
+
+.footer {
+    margin-top: -50px; /* Adjust this value based on your footer height */
+    height: 50px; /* Set the height of your footer */
+    clear: both;
+}

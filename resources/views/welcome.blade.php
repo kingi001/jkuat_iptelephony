@@ -102,8 +102,10 @@
                         <!-- end of search handling form -->
                  </div>
                     </div>
+                    <div class="table-container">
+
                     <div class="table table-striped text-center">
-                      <table style=" font-size:12px;" class="table table-stripped  ">
+                      <table  class="table table-stripped  ">
                         <thead class="table-success">
                           <tr>
                           
@@ -116,75 +118,22 @@
                           </tr>
                         </thead>
                         <tbody>
+                          @foreach($telephones as $telephone)
                           <tr>
-                            
-                            <td>1</td>
-                            <td>MAIN1</td>
-                            <td>1002</td>
-                            <td>KHAMIS KINGI</td>
-                            <td>ICT</td>
-                           
-                            
-                            </td>
+                            <td>{{$telephone->id}}</td>
+                            <td>{{$telephone->ccode}}</td>
+                            <td>{{$telephone->extnumber}}</td>
+                            <td>{{$telephone->owerassigned}}</td>
+                            <td>{{$telephone->deptname}}</td>
+                         
                           </tr>
-                          <tr>
-                            
-                            <td>1</td>
-                            <td>MAIN1</td>
-                            <td>1002</td>
-                            <td>KHAMIS KINGI</td>
-                            <td>ICT</td>
-                           
-                            
-                            </td>
-                          </tr>
-                          <tr>
-                            
-                            <td>1</td>
-                            <td>MAIN1</td>
-                            <td>1002</td>
-                            <td>KHAMIS KINGI</td>
-                            <td>ICT</td>
-                           
-                            
-                            </td>
-                          </tr>
-                          <tr>
-                            
-                            <td>1</td>
-                            <td>MAIN1</td>
-                            <td>1002</td>
-                            <td>KHAMIS KINGI</td>
-                            <td>ICT</td>
-                           
-                            
-                            </td>
-                          </tr>
-                          <tr>
-                            
-                            <td>1</td>
-                            <td>MAIN1</td>
-                            <td>1002</td>
-                            <td>KHAMIS KINGI</td>
-                            <td>ICT</td>
-                           
-                            
-                            </td>
-       
-          
-                        </tbody>
-                      </table>
-          
-                    </div>
-                    
-          
-                  </div>
-                  </form>
-                </div>
-          
-              </div>
-            </div>           
+                          @endforeach
             </table>
+                    </div>
+            <div class="mt-4">
+              {{$telephones->links('pagination::bootstrap-5') }}
+            </div>
+
             <div class="footer">
                 @include('footer')
 

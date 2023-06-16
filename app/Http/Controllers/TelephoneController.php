@@ -25,9 +25,14 @@ class TelephoneController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function landing()
     {
-        //
+        $telephones = Telephone::with('campus', 'department')->get();
+        $telephones = Telephone::orderBy('id', 'ASC')->paginate(10);
+        $departments = Department::select('deptname')->distinct('deptname')->pluck('deptname');
+        $campus = Campus::select('ccode')->distinct('ccode')->pluck('ccode');
+        return view('welcome', compact('telephones', 'departments', 'campus'));
+        
     }
 
     /**

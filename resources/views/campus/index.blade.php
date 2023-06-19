@@ -32,6 +32,8 @@
           <div class="col-md-12">
             <div class="card-body">
               <div class="mb-1">
+                <div class="table-container">
+
                 <div class="table table-striped">
                   <table style="width: 100%;" class="table table-stripped">
                     <thead class="table-success">
@@ -72,19 +74,14 @@
                           </center>
                           </td>
                       </tr>
-
                       @endforeach
-                      
-
-
                     </tbody>
                   </table>
-                  
-
-                </div>
+           </div>
                 <div class="mt-2">
                  {{ $campus->links('pagination::bootstrap-5') }}
                  </div>
+                </div>
 
 
               </div>

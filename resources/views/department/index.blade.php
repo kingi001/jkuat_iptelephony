@@ -32,6 +32,8 @@
           <div class="col-md-14">
             <div class="card-body">
               <div class="mb-1">
+                <div class="table-container">
+
                 <div class="table table-striped">
                   <table style="width: 100%;" class="table table-stripped">
                     <thead class="table-primary">
@@ -69,12 +71,14 @@
 
                     </tbody>
                   </table>
+               
                  
 
                 </div>
                 <div class="mt-5">
                  {{$departments->links('pagination::bootstrap-5') }}
                  </div>
+                </div>
                
 
               </div>

@@ -113,6 +113,18 @@ class TelephoneController extends Controller
 
         return view('telephone.index', compact('telephones', 'departments', 'campus'));
     }
+    public function searchext(Request $request)
+    {
+        $query = $request->input('query');
+        $telephones = Telephone::where('extnumber', 'LIKE', "%$query%")
+        ->orWhere('owerassigned','LIKE',"%$query%")
+        ->paginate(10);
+
+        $departments = Department::select('deptname')->distinct('deptname')->pluck('deptname');
+        $campus = Campus::select('ccode')->distinct('ccode')->pluck('ccode');
+
+        return view('welcome', compact('telephones', 'departments', 'campus'));
+    }
 
 
     public function filter(Request $request)

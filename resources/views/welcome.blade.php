@@ -55,33 +55,33 @@
                       </div>
                     </div>
                     <div class="col-md-12">
-                      <div class="card-body" >
+                      <div class="card-body">
                         <div class="mb-1">
-                          <form action="#" name="query" method="GET" class="form-inline my-1 my-lg-0" role="#" style="font-size: 14px">
-                            <div class="form-group" >
+                          <form action="{{route('filter')}}" name="query" method="GET" class="form-inline my-1 my-lg-0" role="#">
+                            <div class="form-group">
                               <label for="campus_filter">Filter by : Campus &nbsp;</label>
                               <Select class="custom-select" id="campus_filter" name="query">
-                                <option value=" " >Select Campus</option>
-                              
+                                <option value=" ">Select Campus</option>
+                                @foreach($campus as $id => $name)
+                                <option value="{{ $id }}">{{ $name }}</option>
+                                @endforeach
                               </select>
-                              <span>&nbsp;</span>
-          
-                              <button type="button" data-bs-toggle="modal" data-bs-target="#add-campus" class="btn btn-outline-primary btn-sm">
-                                <i class="fa fa-filter" aria-hidden="true"></i>
-                              </button>
+                              <span>&nbsp;</span>                   
                               <span>&nbsp;</span>
                               <span>&nbsp;</span>
                               <span>&nbsp;</span>
                               <span>&nbsp;</span>
           
                               <label for="category_filter"> &nbsp;Department &nbsp;</label>
-                              <Select class="custom-select" id="category_filter" name="query">
-                                <option value=" " >Select Department</option>
-                               
+                              <Select class="custom-select" id="category_filter" name="querys">
+                                <option value=" ">Select Department</option>
+                                @foreach($departments as $id => $name)
+                                <option value="{{ $id }}">{{ $name }}</option>
+                                @endforeach
                               </select>
                               <span>&nbsp;</span>
-                              <button type="button" data-bs-toggle="modal" data-bs-target="#add-department" class="btn btn-outline-primary btn-sm">
-                                <i class="fa fa-filter" aria-hidden="true"></i>
+                              <button type="submit" data-bs-toggle="modal" data-bs-target="#add-department" class="btn btn-outline-primary btn-sm">
+                               Filter <i class="fa fa-filter" aria-hidden="true"></i>
                               </button>
                               <span>&nbsp;</span>
                               <span>&nbsp;</span>
@@ -91,14 +91,15 @@
                           <span>&nbsp;</span>
                           <span>&nbsp;</span>
                           <span>&nbsp;</span>
-                          <!-- search handling form -->
-                          <form action="#" name="query" method="GET" class="form-inline my-1 my-lg-0" role="#">
-          
-                            <input type="search" name="query" id="" class="form-control"  placeholder="Search Ext_NO || Owner Assigned">
-                            <span>&nbsp;</span>
-                            <button type="submit" class="btn btn-success btn-sm " ><i class="fa fa-search" aria-hidden="true"></i> Search</button>
-                        </div>
-                        </form>
+                         <!-- search handling form -->
+                <form action="{{route('searchext')}}" name="query" method="GET" class="form-inline my-1 my-lg-0" role="#">
+
+                  <input type="search" name="query" id="" class="form-control" placeholder="Search Extension Or Owner">
+                  <span>&nbsp;</span>
+                  <button type="submit" class="btn btn-success btn-sm "><i class="fa fa-search" aria-hidden="true"></i> Search</button>
+              </div>
+              </form>
+              <!-- end of search handling form -->
                         <!-- end of search handling form -->
                  </div>
                     </div>

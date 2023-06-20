@@ -110,7 +110,6 @@
                         <thead class="table-success">
                           <tr>
                           
-                            <th>ID</th>
                             <th>Campus</th>
                             <th>Ext.NO</th>
                             <th>Owner Assigned</th>
@@ -121,7 +120,6 @@
                         <tbody>
                           @foreach($telephones as $telephone)
                           <tr>
-                            <td>{{$telephone->id}}</td>
                             <td>{{$telephone->ccode}}</td>
                             <td>{{$telephone->extnumber}}</td>
                             <td>{{$telephone->owerassigned}}</td>

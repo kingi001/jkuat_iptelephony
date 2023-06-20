@@ -38,7 +38,7 @@ Route::post('/update/{id}', [TelephoneController::class, 'update'])->name('telep
 Route::delete('/delete/{id}', [TelephoneController::class, 'delete'])->name('telephone.delete');
 Route::get('/search', 'App\Http\Controllers\TelephoneController@search')->name('search');
 
-Route::get('/search', 'App\Http\Controllers\TelephoneController@searchext')->name('searchext');
+Route::get('/searchextension', 'App\Http\Controllers\TelephoneController@searchext')->name('searchext');
 
 Route::get('/filter', [TelephoneController::class, 'filter'])->name('filter');
 
